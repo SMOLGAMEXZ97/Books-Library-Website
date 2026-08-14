@@ -1,0 +1,6 @@
+{
+  "name": "Books Library 97",
+  "description": "Refined digital editorial reader, curated book collections, personalized bookshelf, reading goals, and immersive reading experience.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
