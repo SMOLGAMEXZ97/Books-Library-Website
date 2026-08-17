@@ -22,63 +22,79 @@ export const HomeView: React.FC<HomeViewProps> = ({
       <section className="min-h-[820px] flex items-center justify-center px-6 md:px-16 pt-28 pb-16 relative overflow-hidden bg-[#0D0D0D]">
         <div className="max-w-[1240px] mx-auto w-full grid grid-cols-1 md:grid-cols-12 gap-12 items-center relative z-10">
           <div className="md:col-span-6 flex flex-col z-20">
-            <span className="font-sans text-[10px] uppercase tracking-[0.25em] text-[#A68F68] font-bold mb-4">
-              Literary Journal & Monograph
+            <span className="font-sans text-[10px] uppercase tracking-[0.25em] text-[#A68F68] font-bold mb-4 flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-[#A68F68] animate-pulse"></span>
+              Books Library 97 • Anthology & Monograph
             </span>
-            <h1 className="text-5xl sm:text-7xl lg:text-[88px] leading-[0.88] font-serif italic letter-tight mb-8 text-[#E2E2E2]">
-              The <br /> Architecture <br />
-              <span className="text-outline">of Silence</span>
+            <h1 className="text-4xl sm:text-6xl lg:text-[76px] leading-[1.02] font-serif italic tracking-tight mb-6 text-[#E2E2E2] font-normal">
+              The Sanctuary <br />
+              <span className="text-[#A68F68] not-italic font-sans font-black tracking-tight text-3xl sm:text-5xl lg:text-[62px] uppercase block my-1">
+                Of Living Thought
+              </span>
+              <span className="font-serif italic text-3xl sm:text-4xl lg:text-[50px] text-[#E2E2E2]/90 block">
+                Edition No. 97
+              </span>
             </h1>
-            <p className="font-sans text-sm md:text-base leading-relaxed text-[#E2E2E2]/60 max-w-[420px] mb-8">
-              An examination of literary resonance, typography, and curated thoughts. Discover timeless essays, brutalist memoirs, and modern prose.
+            <p className="font-sans text-sm md:text-base leading-relaxed text-[#E2E2E2]/75 max-w-[460px] mb-8 font-light">
+              Explore an expansive archive of timeless literature, critical essays, philosophy, and curated contemporary prose — preserved in a tranquil digital reading sanctuary.
             </p>
             <div className="flex flex-wrap gap-4 items-center">
               <button
                 onClick={() => onSelectBook('arch-silence')}
-                className="bg-[#E2E2E2] text-[#0D0D0D] font-sans text-[10px] font-bold uppercase px-8 py-3.5 tracking-[0.2em] hover:bg-[#A68F68] transition-all cursor-pointer shadow-xl active:scale-98"
+                className="bg-[#A68F68] text-[#0D0D0D] font-sans text-[10px] font-bold uppercase px-8 py-3.5 tracking-[0.2em] hover:bg-[#BCA37A] transition-all cursor-pointer shadow-2xl active:scale-98 flex items-center gap-2"
               >
-                Read Essay
+                <span className="material-symbols-outlined text-base">auto_stories</span>
+                <span>Open Featured Volume</span>
               </button>
               <button
                 onClick={() => setActiveTab('browse')}
-                className="border border-subtle text-[#E2E2E2] font-sans text-[10px] font-bold uppercase px-8 py-3.5 tracking-[0.2em] hover:border-white transition-all cursor-pointer active:scale-98"
+                className="border border-[#A68F68]/40 bg-[#161616] text-[#E2E2E2] font-sans text-[10px] font-bold uppercase px-8 py-3.5 tracking-[0.2em] hover:border-white hover:bg-[#222] transition-all cursor-pointer active:scale-98 flex items-center gap-2"
               >
-                Chronicle Index
+                <span className="material-symbols-outlined text-base">explore</span>
+                <span>Explore Catalog</span>
               </button>
-              <span className="font-serif italic text-xs text-[#E2E2E2]/40 ml-2 hidden sm:inline">
-                12 Min Reading Time
+              <span className="font-serif italic text-xs text-[#E2E2E2]/50 ml-2 hidden sm:inline">
+                Vol. 97 Archive
               </span>
             </div>
           </div>
 
-          <div className="md:col-span-6 relative h-[420px] md:h-[540px] flex justify-end">
-            <div className="w-full md:w-[90%] h-full bg-[#161616] border border-subtle relative group rounded-sm overflow-hidden">
-              <div
-                className="bg-cover bg-center w-full h-full absolute inset-0 opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
-                style={{
-                  backgroundImage:
-                    "url('https://lh3.googleusercontent.com/aida-public/AB6AXuBc5fZ7_Wy0O4hokA7mVKKqgVYXfFpYSP2lSrOR58yJKkkjSdQ4ehsPfIs5QYIVZh8Oa1-KLsIx2ys2iwOlXY523_CVUWeRt5eMvW1kKz2lSHHxHU2smxoWtfLlXDwdse12Z-AtoeiOqRLoXhTsPctIPc3nRjBGToOXMct-iZFgPx7VvhuYM6nKBZ-erRvoi8MslxlJKviiTMKwWYJFAgRfa6X3iv2jow4tllJdQMrbFgLS9prd8NO8')",
-                }}
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0D0D0D] via-transparent to-[#0D0D0D]/40 pointer-events-none" />
-
-              {/* Floating Perspective Badge */}
-              <div className="absolute -left-4 sm:-left-8 bottom-8 bg-[#A68F68] text-[#0D0D0D] p-6 sm:p-8 w-[260px] sm:w-[300px] shadow-2xl border border-black/20">
-                <div className="font-sans text-[10px] font-bold uppercase tracking-[0.2em] mb-2 opacity-80">
-                  Perspective No. 88
+          <div className="md:col-span-6 relative h-[460px] md:h-[560px] flex justify-end">
+            <div className="w-full md:w-[94%] h-full bg-[#161616] border border-[#A68F68]/30 relative group shadow-2xl overflow-hidden flex flex-col justify-between p-3 sm:p-4">
+              {/* Full Crisp Artwork Showcase */}
+              <div className="relative w-full h-[320px] md:h-[400px] overflow-hidden border border-subtle bg-[#080808]">
+                <div
+                  className="bg-cover bg-center w-full h-full transform group-hover:scale-105 transition-all duration-700 brightness-95 group-hover:brightness-105"
+                  style={{
+                    backgroundImage:
+                      "url('https://images.unsplash.com/photo-1507842229456-655f269a8b14?auto=format&fit=crop&q=85&w=1600')",
+                  }}
+                />
+                <div className="absolute top-3 left-3 bg-[#0D0D0D]/90 backdrop-blur-md border border-[#A68F68]/40 px-3 py-1 text-[#A68F68] font-sans text-[9px] uppercase font-bold tracking-[0.2em] flex items-center gap-1.5">
+                  <span className="material-symbols-outlined text-xs">local_library</span>
+                  <span>Grand Reading Hall</span>
                 </div>
-                <p className="font-serif text-base leading-snug italic">
-                  "Words are noble material when they speak of heavy existence and quiet light."
-                </p>
-                <div className="mt-4 pt-3 border-t border-black/15 flex justify-between items-center">
-                  <span className="font-sans text-[9px] uppercase font-bold">Vol. IV Monograph</span>
-                  <span className="font-sans text-[9px] opacity-70">Aura Press</span>
+                <div className="absolute bottom-3 right-3 bg-[#0D0D0D]/85 backdrop-blur-md border border-subtle px-3 py-1 font-mono text-[10px] text-[#E2E2E2]/80">
+                  EST. 1997 • ARCHIVE 97
                 </div>
               </div>
 
-              <div className="absolute top-6 right-6 flex flex-col items-end gap-1 pointer-events-none">
-                <span className="font-sans text-[9px] uppercase tracking-[0.2em] text-[#E2E2E2]/40">Coordinates</span>
-                <span className="font-sans text-[10px] text-[#E2E2E2]/80 font-mono">48.8566° N, 2.3522° E</span>
+              {/* Bottom Showcase Dossier Strip */}
+              <div className="pt-3 border-t border-subtle/80 flex items-center justify-between gap-4 text-[#E2E2E2]">
+                <div className="min-w-0">
+                  <span className="font-sans text-[9px] uppercase font-bold text-[#A68F68] tracking-[0.2em] block">
+                    Curator's Choice
+                  </span>
+                  <p className="font-serif italic text-sm text-[#E2E2E2] truncate">
+                    "The Architecture of Silence" by Eleanor Vance
+                  </p>
+                </div>
+                <button
+                  onClick={() => onSelectBook('arch-silence')}
+                  className="px-4 py-2 bg-[#A68F68] text-[#0D0D0D] font-sans text-[9px] uppercase font-bold tracking-widest hover:bg-[#BCA37A] transition-colors shrink-0 cursor-pointer"
+                >
+                  Inspect Volume
+                </button>
               </div>
             </div>
 
