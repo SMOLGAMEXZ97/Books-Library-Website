@@ -26,10 +26,10 @@ export const HomeView: React.FC<HomeViewProps> = ({
               <span className="w-2 h-2 rounded-full bg-[#A68F68] animate-pulse"></span>
               Books Library 97 • Anthology & Monograph
             </span>
-            <h1 className="text-4xl sm:text-6xl lg:text-[76px] leading-[1.02] font-serif italic tracking-tight mb-6 text-[#E2E2E2] font-normal">
+            <h1 className="text-4xl sm:text-6xl lg:text-[76px] leading-[1.02] font-serif italic tracking-tight mb-6 text-[#E2E2E2] font-normal bg-[#000000] p-4 sm:p-6 border border-subtle">
               The Sanctuary <br />
               <span className="text-[#A68F68] not-italic font-sans font-black tracking-tight text-3xl sm:text-5xl lg:text-[62px] uppercase block my-1">
-                Of Living Thought
+                Of Living Thoughts
               </span>
               <span className="font-serif italic text-3xl sm:text-4xl lg:text-[50px] text-[#E2E2E2]/90 block">
                 Edition No. 97
